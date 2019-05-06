@@ -22,7 +22,12 @@ module.exports = appInfo => {
   const userConfig = {
     // myAppName: 'egg',
   };
-
+  exports.cluster = {
+    listen: {
+      port: 3000,
+      hostname: '0.0.0.0'
+    }
+  }
   return {
     ...config,
     ...userConfig,
